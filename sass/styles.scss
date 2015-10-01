@@ -6,7 +6,7 @@
 $dark-color: #222; //black
 $light-color: #FFF; //white
 $bright-color: #ffa500; //orange
-$padding: 20px;
+$padding: 15px;
 
 // Media Query Ranges
 $medium: 'only screen and (min-width: 600px) and (max-width: 899px)';
@@ -16,6 +16,8 @@ $large: 'only screen and (min-width: 900px)';
 @mixin block_font($block_font_size: 25px, $block_font_color: $dark-color) {
   font-size: $block_font_size;
   color: $block_font_color;
+  box-sizing: border-box;
+
 }
 
 // Styles
@@ -62,30 +64,37 @@ h2{
 }
 
 .block_family{
+  box-sizing: border-box;
+  max-width: 250px;
+  margin:auto;
 
   @media #{$medium} {
-    color: $light-color;
+    max-width: 400px;
   }
 
   @media #{$large} {
-    color: $bright-color;
+    max-width: 700px;
   }
 }
 
 .block_family li{
-  max-width: 250px;
-  margin:auto;
   background-color: $dark-color;
   margin-bottom: 20px;
   padding: $padding;
 
   @media #{$medium} {
     background-color: $light-color;
-    max-width:350px;
+    box-sizing: border-box;
+    width: 48%;
+    float: left;
+    margin: 2px;
   }
 
   @media #{$large} {
     background-color: $bright-color;
-    max-width:600px;
+    box-sizing: border-box;
+    width: 30%;
+    float: left;
+    margin: 4px;
   }
 }
